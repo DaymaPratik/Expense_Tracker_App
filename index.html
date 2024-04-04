@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+
+</head>
+
+<body>
+   <!-- NAVBAR -->
+   <nav class="flex px-[30px] py-[15px] justify-between align-center bg-white opacity-85 fixed z-15 w-full z-10">
+    <div id="nav-left" class=" flex items-center  justify-center  min-[1068px]:w-[20%]">
+        <img src="https://p1.hiclipart.com/preview/632/465/219/rotary-logo-marketing-business-customer-sales-hospital-patient-expense-png-clipart.jpg"
+            alt="" class="w-[40px]">
+        <p class="hover:bg-black hover:text-white border-2 border-black hover:opacity-80 duration-200 ease-in p-[5px] rounded-[10px] text-[20px] min-[768px]:text-[30px] ml-[10px] "><a href="./index.html">Your Welcome</a></p>
+    </div>
+    <div id="nav-rigth" class=" flex items-center max-[570px]:p-[5px] min-[570px]:justify-evenly min-[570px]:w-[55%] min-[1068px]:w-[40%]">
+        <p class="hover:bg-black hover:text-white border-2 border-black hover:opacity-80 duration-200 ease-in p-[5px] rounded-[10px] font-semibold text-[18px] min-[768px]:text-[25px] p-[5px] max-[570px]:hidden"><a href="./tax.html">Tax UI</a></p>
+        <p class="hover:bg-black hover:text-white border-2 border-black hover:opacity-80 duration-200 ease-in p-[5px] rounded-[10px] font-semibold text-[18px] min-[768px]:text-[25px] p-[5px] max-[570px]:hidden"><a href="./gemini.html">Gemini Ai</a></p>
+        <p class="hover:bg-black hover:text-white border-2 border-black hover:opacity-80 duration-200 ease-in p-[5px] rounded-[10px] font-semibold text-[18px] min-[768px]:text-[25px] p-[5px] max-[570px]:hidden"><a href="./payment.html">Payment UI</a></p>
+        <p class="min-[570px]:hidden border-2 border-black ">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+          </p>
+    </div>
+</nav>
+<!-- MAIN Balance DISPLAY -->
+    <main id="main-container" class="h-[140vh] min-[230px]:h-[123vh] min-[350px]:h-[90vh] min-[500px]:h-[110vh] min-[700px]:h-[140vh] bg-[url('https://images.unsplash.com/photo-1514108225820-2b602873ac36?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-no-repeat bg-cover 
+     flex max-[500px]:pb-[20px] items-end min-[500px]:items-center justify-center bg-center
+  ">
+
+        <div id="main-div-cont"
+            class="border-2 border-white  w-[90%] min-[650px]:w-[80%] min-[900px]:w-[60%]    text-white  text-center">
+
+            
+            <div id="main-balance-heading-box">
+                <h2 class="border-2 border-yellow-800 text-[25px] min-[340px]:text-[35px] min-[650px]:text-[45px] font-bold text-start min-[300px]:p-[10px] min-[650px]:p-[20px]">Your Summary</h2>
+             </div>
+            <div id="bal-sav-container" class="border-2 border-white min-[350px]:flex justify-evenly py-[30px]">
+                
+                <div id="main-bal-box" class=" border-2 border-red-800 bg-white max-[350px]:mb-[15px] max-[350px]:mx-auto max-[350px]:w-[60%] text-black rounded-[15px]  min-[300px]:p-[10px] min-[650px]:p-[25px]">
+                    <p class="text-[20px] min-[600px]:text-[30px] font-semibold ">Your Balance</p>
+                    <p id="main-bal" class="text-[25px] min-[600px]:text-[40px] font-bold text-sky-700">
+                        0.00
+                        
+                    </p><span class="text-sky-700 text-[15px] min-[600px]:text-[20px] font-bold">RS</span>
+                </div>
+                <div id="main-sav-box " class="border-2 border-red-800 bg-white max-[350px]:mx-auto max-[350px]:w-[60%] text-black rounded-[15px] min-[300px]:p-[10px] min-[650px]:p-[25px] ">
+                    <p class="text-[20px] min-[600px]:text-[30px] font-semibold "> Your Savings</p>
+                    <p id="main-sav" class="text-[25px] min-[600px]:text-[40px] font-bold text-green-700">
+                        0.00 
+                    </p><span class="text-green-800 text-[15px] min-[600px]:text-[20px] font-bold">RS</span>
+                </div>
+            </div>
+
+
+            <div id="exp-inc-container" class="border-2 border-white min-[350px]:flex  justify-evenly py-[30px]">
+
+                <div id="main-inc-box" class=" border-2 border-red-800 bg-white max-[350px]:mb-[15px] max-[350px]:mx-auto max-[350px]:w-[60%] text-black rounded-[15px] min-[300px]:p-[10px] min-[650px]:p-[25px]">
+                    <p class="text-[20px] min-[600px]:text-[30px] font-semibold">Your Income</p>
+                    <p id="main-inc" class="text-[25px] min-[600px]:text-[40px] font-bold text-black">
+                        0.00
+                        
+                    </p><span class="text-black text-[15px] min-[600px]:text-[20px] font-bold">RS</span>
+                </div>
+                <div id="main-exp-box " class="border-2 border-red-800 bg-white max-[350px]:mx-auto max-[350px]:w-[60%] text-black rounded-[15px] min-[300px]:p-[10px] min-[650px]:p-[25px] ">
+                    <p class="text-[20px] min-[600px]:text-[30px] font-semibold "> Your Expense</p>
+                    <p id="main-exp" class="text-[25px] min-[600px]:text-[40px] font-bold text-red-800">
+                        0.00 
+                    </p><span class="text-red-800 text-[15px] min-[600px]:text-[20px] font-bold">RS</span>
+                </div>
+            </div>
+
+        </div>
+
+
+    </main>
+
+<!-- TRANSACTION ENTRY SECTION -->
+    <section id="your-tanscations-section-entry" class="h-[160vh] min-[750px]:h-[100vh] w-full border-2 border-black min-[750px]:flex items-center justify-evenly h-[100vh] bg-[url('https://images.unsplash.com/photo-1617203441790-5723a811b7fe?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-no-repeat bg-cover bg-center ">
+
+
+<!-- TRANSACTION ENTRY POINT -->
+        <div id="your-transcation-box"
+            class="border-2 border-black mx-auto w-[90%] min-[550px]:w-[70%] min-[750px]:w-[50%] p-[7px] min-[300px]:p-[15px] min-[1150px]:p-[25px]   text-black min-[750px]:h-[80%] max-[750px]:my-[20px] text-white bg-black opacity-70 rounded">
+            <p class="text-[20px] min-[350px]:text-[25px] min-[1000px]:text-[35px] font-bold mb-[20px]">Please Add Your Transaction:-</p>
+            <form action="" class="flex flex-col ">
+                <div class="border-black border-2 flex align-center mb-[20px]">
+                    <label for="trans-description"
+                        class="border-2 border-black text-[15px] min-[350px]:text-[20px] min-[1000px]:text-[30px] font-bold ">Description:-</label>
+                    <input type="text" id="trans-description" placeholder="Description"
+                        class="border-2 border-black text-[20px] p-[5px] inline-block w-[100%] text-black">
+                </div>
+
+                <div class="border-black border-2 flex align-center mb-[20px]">
+                    <label for="trans-amount" class="border-2 border-black text-[15px] min-[350px]:text-[20px] min-[1000px]:text-[30px] font-bold">Amount:-</label>
+                    <input type="number" id="trans-amount" placeholder="Amount"
+                        class="border-2 border-black text-[20px] p-[5px] inline-block w-[100%] text-black">
+                </div>
+
+               <!-- DATE -->
+                <div class="border-black border-2 flex align-center mb-[20px]">
+                    <label for="trans-date" class="border-2 border-black text-[15px] min-[350px]:text-[20px] min-[1000px]:text-[30px] font-bold">Date:-</label>
+                    <input type="date" id="trans-date" placeholder=""
+                        class="border-2 border-black text-[20px] p-[5px] inline-block w-[100%] text-black">
+                </div>
+
+                <div class="border-black border-2 flex align-center mb-[20px]">
+                    <label for="types-of-trans" class="border-2 border-black text-[15px] min-[350px]:text-[20px] min-[1000px]:text-[30px] font-bold">Type:-</label>
+                    <select name="types" id="trans-type"
+                        class="border-2 border-black text-[20px] p-[5px] inline-block w-[100%] text-black">
+                        <option value="#">Click Me</option>
+                        <option value="Income">Income</option>
+                        <option value="Expenditure">Expenditure</option>
+                        <option value="Savings">Savings</option>
+                    </select>
+                </div>
+                <button id="complete-trans" class="border-2 border-white hover:bg-[white] transition ease-in duration-300 hover:text-black  text-[15px] min-[350px]:text-[20px] min-[1000px]:text-[30px] p-[7px]  mx-auto">Add
+                    Transaction</button>
+            </form>
+        </div>
+
+
+<!-- TRANSACTION HISTORY DISPALY -->
+        <div id="your-transaction-display-history" class="mx-auto w-[90%] min-[550px]:w-[70%] border-2 border-black h-[50%] min-[750px]:h-[80%] overflow-y-scroll min-[750px]:w-[40%] text-white bg-black opacity-70 rounded" >
+            <p class="border-2 border-black text-[25px] min-[1000px]:text-[35px] font-bold ">Transaction History</p>
+             <table id="transaction-table" class="w-[100%] text[15px] min-[1150px]:text-[25px] font-semibold border-2 border-black ">
+                    <tr>
+                        <td class="border-2 border-white text-center">Sr.No</td>
+                        <td class="border-2 border-white">Description</td>
+                        <td class="border-2 border-white">Amount</td>
+                        <td class="border-2 border-white">Type</td>
+                        <td class="border-2 border-white">Date</td>
+                        <td class="border-2 border-white"><button>X</button></td>
+                    </tr>
+             </table>
+    
+           
+            </div>
+
+
+    </section>
+
+
+
+    <section id="pie-chart-container" class="mt-[30px] min-[600px]:h-[90vh] flex items-center justify-center  border-2 border-black bg-[url('https://images.unsplash.com/photo-1494888427482-242d32babc0b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-no-repeat bg-cover bg-center">
+        <canvas id="myChart" class="border-2 border-red-500 w-[80%] bg-black opacity-70">
+            
+        </canvas>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+   <script src="script.js"></script>
+
+
+</body>
+
+</html>
