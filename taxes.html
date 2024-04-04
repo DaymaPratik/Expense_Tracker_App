@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    
+    <!-- NAVBAR -->
+    <nav class="flex px-[30px] py-[15px] justify-between align-center bg-white opacity-85 fixed z-15 w-full z-10 top-0 " >
+        <div id="nav-left" class=" flex items-center ">
+            <img src="https://p1.hiclipart.com/preview/632/465/219/rotary-logo-marketing-business-customer-sales-hospital-patient-expense-png-clipart.jpg"
+                alt="" class="w-[40px]">
+            <p class="hover:bg-black hover:text-white border-2 border-black hover:opacity-80 duration-200 ease-in p-[5px] rounded-[10px] text-[20px] min-[768px]:text-[30px] ml-[10px] "><a href="./index.html">Your Welcome</a></p>
+        </div>
+        <div id="nav-rigth" class=" flex items-center max-[570px]:p-[5px] min-[570px]:justify-evenly min-[570px]:w-[55%] min-[1068px]:w-[40%]">
+            <p class="hover:bg-black hover:text-white border-2 border-black hover:opacity-80 duration-200 ease-in p-[5px] rounded-[10px] font-semibold text-[18px] min-[768px]:text-[25px] p-[5px] max-[570px]:hidden"><a href="./taxes.html">Tax UI</a></p>
+            <p class="hover:bg-black hover:text-white border-2 border-black hover:opacity-80 duration-200 ease-in p-[5px] rounded-[10px] font-semibold text-[18px] min-[768px]:text-[25px] p-[5px] max-[570px]:hidden"><a href="./gemini.html">Gemini Ai</a></p>
+            <p class="hover:bg-black hover:text-white border-2 border-black hover:opacity-80 duration-200 ease-in p-[5px] rounded-[10px] font-semibold text-[18px] min-[768px]:text-[25px] p-[5px] max-[570px]:hidden"><a href="./payment.html">Payment UI</a></p>
+            <p class="min-[570px]:hidden border-2 border-black ">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+              </p>
+        </div>
+    </nav>
+
+    <div id="main" class=" mt-[100px] w-[90%] min-[550px]:w-[80%] min-[720px]:w-[60%] min-[1100px]:w-[40%] mx-auto h-[60vh] min-[350px]:h-[53vh] bg-black text-white opacity-80  rounded-[10px]">
+        <p class="text-[20px] min-[500px]:text-[30px] font-semibold p-[10px]  border-2 border-black ">Add Your Information:</p>
+        <form action="" class="rounded-[10px] flex flex-col  h-[80%] p-[20px]">
+           <div>
+            <label for="name" class="text-[20px] min-[500px]:text-[30px] font-semibold p-[5px]">Name:</label>
+            <input type="text" id="name" class="text-[15px] min-[500px]:text-[20px] p-[5px] border-2 border-black my-[20px] text-black">
+           </div>
+            <div>
+                <label for="income" class="text-[20px] min-[500px]:text-[30px] font-semibold p-[5px]">Income:</label>
+            <input type="number" id="income" class="text-[15px] min-[500px]:text-[20px] p-[5px] border-2 border-black my-[20px] text-black">
+            </div>
+            <button class="text-[20px] hover:text-black hover:bg-white duration-200 ease-in rounded-[10px] font-semibold px-[20px] py-[10px] border-2 border-white my-[20px] mx-auto" id="add-details">Add Details</button>
+        </form>
+    </div>
+    <div id="result" class="hidden w-[90%] min-[550px]:w-[80%] min-[720px]:w-[60%] min-[1100px]:w-[40%] mx-auto rounded-[10px]">
+        <p class="text-[15px] min-[500px]:text-[25px] font-semibold border-2 border-black p-[10px] mx-auto bg-black text-white opacity-80" id="taxP-display"></p>
+        <p class="text-[15px] min-[500px]:text-[25px]  font-semibold border-2 border-black p-[10px]  mx-auto bg-black text-white opacity-80" id="net-tax-display"></p>
+    </div>
+    <script src="taxes.js"></script>
+</body>
+</html>
