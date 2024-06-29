@@ -1,82 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        .body{
-            background: linear-gradient(90deg,#a7dcff, #ad9af1);
+        .body {
+            background: linear-gradient(90deg, #a7dcff, #ad9af1);
+        }
+        
+        .cards-cont{
+            width: 100%;
+            border: 2px solid black;
+            height: 70vh;
+            padding: 30px 0px;
         }
     </style>
 </head>
+
 <body class="body">
 
-    <nav class="flex px-[30px] py-[15px] justify-between align-center bg-white opacity-85 fixed z-15 w-full z-10 top-0" >
+    <nav class="flex px-[30px] py-[15px] justify-between align-center bg-white opacity-85 fixed z-15 w-full z-10 top-0">
         <div id="nav-left" class=" flex items-center ">
             <img src="https://p1.hiclipart.com/preview/632/465/219/rotary-logo-marketing-business-customer-sales-hospital-patient-expense-png-clipart.jpg"
                 alt="" class="w-[40px]">
-            <p class="hover:bg-black hover:text-white border-2 border-black hover:opacity-80 duration-200 ease-in p-[5px] rounded-[10px] text-[20px] min-[768px]:text-[30px] ml-[10px] "><a href="./index.html">Your Welcome</a></p>
+            <p
+                class="hover:bg-black hover:text-white border-2 border-black hover:opacity-80 duration-200 ease-in p-[5px] rounded-[10px] text-[20px] min-[768px]:text-[30px] ml-[10px] ">
+                <a href="./index.html">Your Welcome</a>
+            </p>
         </div>
-        <div id="nav-rigth" class=" flex items-center max-[570px]:p-[5px] min-[570px]:justify-evenly min-[570px]:w-[55%] min-[1068px]:w-[40%]">
-            <p class="hover:bg-black hover:text-white border-2 border-black hover:opacity-80 duration-200 ease-in p-[5px] rounded-[10px] font-semibold text-[18px] min-[768px]:text-[25px] p-[5px] max-[570px]:hidden"><a href="./taxes.html">Tax UI</a></p>
-            <p class="hover:bg-black hover:text-white border-2 border-black hover:opacity-80 duration-200 ease-in p-[5px] rounded-[10px] font-semibold text-[18px] min-[768px]:text-[25px] p-[5px] max-[570px]:hidden"><a href="./gemini.html">Gemini Ai</a></p>
-            <p class="hover:bg-black hover:text-white border-2 border-black hover:opacity-80 duration-200 ease-in p-[5px] rounded-[10px] font-semibold text-[18px] min-[768px]:text-[25px] p-[5px] max-[570px]:hidden"><a href="./payment.html">Payment UI</a></p>
+        <div id="nav-rigth"
+            class=" flex items-center max-[570px]:p-[5px] min-[570px]:justify-evenly min-[570px]:w-[55%] min-[1068px]:w-[40%]">
+            <p
+                class="hover:bg-black hover:text-white border-2 border-black hover:opacity-80 duration-200 ease-in p-[5px] rounded-[10px] font-semibold text-[18px] min-[768px]:text-[25px] p-[5px] max-[570px]:hidden">
+                <a href="./taxes.html">Tax UI</a>
+            </p>
+            <p
+                class="hover:bg-black hover:text-white border-2 border-black hover:opacity-80 duration-200 ease-in p-[5px] rounded-[10px] font-semibold text-[18px] min-[768px]:text-[25px] p-[5px] max-[570px]:hidden">
+                <a href="./gemini.html">Gemini Ai</a>
+            </p>
+            <p
+                class="hover:bg-black hover:text-white border-2 border-black hover:opacity-80 duration-200 ease-in p-[5px] rounded-[10px] font-semibold text-[18px] min-[768px]:text-[25px] p-[5px] max-[570px]:hidden">
+                <a href="./payment.html">Payment UI</a>
+            </p>
             <p class="min-[570px]:hidden border-2 border-black ">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-              </svg>
-              </p>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </p>
         </div>
     </nav>
-  
-   
-    <main id="main" class="   w-[100%] h-[100vh] relative top-[90px]">
-   
 
-      
-    
-        <div class=" bg-white opacity-80 w-[96%] min-[350px]:w-[90%] min-[1100px]:w-[70%] mx-[auto] max-[750px]:p-[20px] min-[750px]:h-[90%] flex flex-col justify-around rounded-[15px]">
+
+    <main id="main" class="   w-[100%] h-[100vh] relative top-[90px]">
+
+
+
+
+        <div
+            class=" bg-white opacity-80 w-[96%] min-[350px]:w-[90%] min-[1100px]:w-[70%] mx-[auto] max-[750px]:p-[20px] min-[750px]:h-[100%] flex flex-col justify-around rounded-[15px]">
+
+            <!-- Hello Conatiner -->
             <div id="hello-container" class=" px-[20px]">
-                <p id="hello1-name" class="text-[24px] min-[350px]:text-[30px] min-[600px]:text-[45px] font-bold bg-[url('https://images.unsplash.com/photo-1433888104365-77d8043c9615?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjIwfHxjb2xvcnxlbnwwfHwwfHx8MA%3D%3D')] bg-no-repeat bg-cover bg-center bg-clip-text text-[transparent]">Hello Pratik,</p>
-                <p id="hello-2" class="text-[24px] min-[350px]:text-[30px] min-[600px]:text-[45px] font-bold mt-[5px]">How can I help you today?</p>
+                <p id="hello1-name"
+                    class="text-[24px] min-[350px]:text-[30px] min-[600px]:text-[45px] font-bold bg-[url('https://images.unsplash.com/photo-1433888104365-77d8043c9615?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjIwfHxjb2xvcnxlbnwwfHwwfHx8MA%3D%3D')] bg-no-repeat bg-cover bg-center bg-clip-text text-[transparent]">
+                    Hello Pratik,</p>
+                <p id="hello-2" class="text-[24px] min-[350px]:text-[30px] min-[600px]:text-[45px] font-bold mt-[5px]">
+                    How can I help you today?</p>
             </div>
-            <div id="cards-container" class="grid min-[460px]:grid-cols-2 max-[750px]:my-[10px] min-[750px]:grid-cols-4 gap-[10px] px-[20px]" >
-                <div id="card1" class="hover:border-2 text-[15px]  bg-[#a7dcff] hover:bg-[black] hover:opacity-80 transition duration-300 ease-in hover:text-white h-[30vh] min-[300px]:h-[28vh] rounded-[10px] p-[7px]">
-                    <p class="">Evaluate and rank the following: film, digital, and polaroid cameras across price, photo quality, and trendiness.</p>
+
+
+
+            <!-- //Cards Container -->
+            <div id="cards-container"
+                 class="grid min-[460px]:grid-cols-2 max-[750px]:my-[10px] min-[750px]:grid-cols-4 gap-[10px] px-[20px]">
+
+                <div id="card1"
+                    class="hover:border-2 text-[15px]  bg-[#a7dcff] hover:bg-[black] hover:opacity-80 transition duration-300 ease-in hover:text-white h-[30vh] min-[300px]:h-[28vh] rounded-[10px] p-[7px]">
+                    <p class="">Evaluate and rank the following: film, digital, and polaroid cameras across price, photo
+                        quality, and trendiness.</p>
                     <button>abc</button>
                 </div>
-                <div id="card1" class="hover:border-2 text-[15px]  bg-[#a7dcff] hover:bg-[black] hover:opacity-80 transition duration-300 ease-in hover:text-white h-[30vh] min-[300px]:h-[28vh] rounded-[10px] p-[7px]">
-                    <p class="">Evaluate and rank the following: film, digital, and polaroid cameras across price, photo quality, and trendiness.</p>
+               
+
+                <div id="card1"
+                    class="hover:border-2 text-[15px]  bg-[#a7dcff] hover:bg-[black] hover:opacity-80 transition duration-300 ease-in hover:text-white h-[30vh] min-[300px]:h-[28vh] rounded-[10px] p-[7px]">
+                    <p class="">Evaluate and rank the following: film, digital, and polaroid cameras across price, photo
+                        quality, and trendiness.</p>
                     <button>abc</button>
                 </div>
-                <div id="card1" class="hover:border-2 text-[15px]  bg-[#a7dcff] hover:bg-[black] hover:opacity-80 transition duration-300 ease-in hover:text-white h-[30vh] min-[300px]:h-[28vh] rounded-[10px] p-[7px]">
-                    <p class="">Evaluate and rank the following: film, digital, and polaroid cameras across price, photo quality, and trendiness.</p>
+
+                <div id="card1"
+                    class="hover:border-2 text-[15px]  bg-[#a7dcff] hover:bg-[black] hover:opacity-80 transition duration-300 ease-in hover:text-white h-[30vh] min-[300px]:h-[28vh] rounded-[10px] p-[7px]">
+                    <p class="">Evaluate and rank the following: film, digital, and polaroid cameras across price, photo
+                        quality, and trendiness.</p>
                     <button>abc</button>
                 </div>
-                <div id="card1" class="hover:border-2 text-[15px]  bg-[#a7dcff] hover:bg-[black] hover:opacity-80 transition duration-300 ease-in hover:text-white h-[30vh] min-[300px]:h-[28vh] rounded-[10px] p-[7px]">
-                    <p class="">Evaluate and rank the following: film, digital, and polaroid cameras across price, photo quality, and trendiness.</p>
+
+                <div id="card1"
+                    class="hover:border-2 text-[15px]  bg-[#a7dcff] hover:bg-[black] hover:opacity-80 transition duration-300 ease-in hover:text-white h-[30vh] min-[300px]:h-[28vh] rounded-[10px] p-[7px]">
+                    <p class="">Evaluate and rank the following: film, digital, and polaroid cameras across price, photo
+                        quality, and trendiness.</p>
                     <button>abc</button>
                 </div>
+
             </div>
+
+           
+
+            <!-- Search Container -->
             <div id="search-container" class=" mx-auto rounded-[10px] border-2 border-black w-[95%] ">
                 <form action="" id="form">
                     <input type="search" id="search" placeholder="Enter Prompt Here.." class="
                     rounded-[10px] w-[100%] p-[10px] text-[20px]">
                 </form>
             </div>
-           </main>
-        
-        
-    
 
 
- 
+        </div>
+    </main>
 
 
-<script src="gemini.js" type="module"></script>
-  
-    
+
+    <script type="importmap">
+        {
+          "imports": {
+            "@google/generative-ai": "https://esm.run/@google/generative-ai"
+          }
+        }
+      </script>
+
+    <script type="module">
+        const Api_key='AIzaSyDy3z1xqNHj1GLJTDriLedS8Bh1QrYRVBg';
+        const url=`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${Api_key}`;
+        const searchIp = document.querySelector('#search');
+        const form = document.querySelector('#form');
+        let username = prompt('Please Enter Your name..');
+        let userNameOp = document.querySelector('#hello1-name');
+        userNameOp.innerHTML = `Hello ${username},`;
+        let cardsContainer=document.querySelector('#cards-container');
+
+        const getData=async(searchIp)=>{
+            const response=await fetch(url,{
+                method:"POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body:JSON.stringify({
+                    contents:[{parts:[{text:searchIp}]}],
+                })
+            })
+            let data=await response.json();
+            data=data.candidates[0].content.parts[0].text;
+           showData(data);
+            console.log(data);
+        }
+
+
+
+
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            console.log("submitted form");
+            getData(searchIp.value);
+        })
+
+     
+        function showData(data){
+            cardsContainer.classList.add('cards-cont');
+            cardsContainer.classList.remove('gird' ,'min-[460px]:grid-cols-2', 'max-[750px]:my-[10px]', 'min-[750px]:grid-cols-4' ,'gap-[10px]');
+            cardsContainer.innerHTML=`
+             <div class="text-[25px] font-semibold text-center my-2 ">${searchIp.value}</div>
+            <span class="block w-[100%] overflow-y-scroll h-[100%] hover:border-2 text-[18px] min-[800px]:text-[25px]  bg-[#a7dcff]
+             hover:bg-[black] hover:opacity-60 transition duration-300 ease-in hover:text-white  rounded-[10px] p-[7px] min-[800px]:p-[20px] ">${data}</span>
+            `;
+        }
+
+
+    </script>
+
+
 </body>
+
 </html>

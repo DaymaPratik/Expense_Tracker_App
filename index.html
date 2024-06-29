@@ -5,13 +5,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    
+    <title>Transaction App</title>
+<style>
+    /* width */
+#your-transaction-display-history::-webkit-scrollbar {
+  width: 10px;
+}
 
+/* Track */
+#your-transaction-display-history::-webkit-scrollbar-track {
+  background: white; 
+}
+ 
+/* Handle */
+#your-transaction-display-history::-webkit-scrollbar-thumb {
+  background: #f64747; 
+  height: 30px;
+  transition: 0.3s ease-in;
+}
+
+/* Handle on hover */
+#your-transaction-display-history::-webkit-scrollbar-thumb:hover {
+  background: rgb(255, 0, 0); 
+}
+body{
+    background: linear-gradient(90deg,#ddf1ff, #dad2fb);
+}
+nav{
+    background: linear-gradient(90deg,#ddf1ff, #dad2fb);
+}
+.table-row{
+    transition: 0.3s ease-in;
+}
+.table-row:hover{
+transform: scaleY(130%);
+background: rgb(245, 133, 133);
+color: black;
+}
+.summary-cards{
+    box-shadow: 0px 0px 20px 7px black;
+    transition: 0.2s ease-in;
+}
+.summary-cards:hover{
+    scale: 102%;
+}
+</style>
 </head>
 
 <body>
    <!-- NAVBAR -->
-   <nav class="flex px-[30px] py-[15px] justify-between align-center bg-white opacity-85 fixed z-15 w-full z-10 top-0 " >
+   <nav class="flex px-[30px] py-[15px] justify-between align-center bg-white z-15 w-full " >
     <div id="nav-left" class=" flex items-center ">
         <img src="https://p1.hiclipart.com/preview/632/465/219/rotary-logo-marketing-business-customer-sales-hospital-patient-expense-png-clipart.jpg"
             alt="" class="w-[40px]">
@@ -28,28 +71,34 @@
           </p>
     </div>
 </nav>
+
+
+
+
+
+
 <!-- MAIN Balance DISPLAY -->
-    <main id="main-container" class="h-[140vh] min-[230px]:h-[123vh] min-[350px]:h-[90vh] min-[500px]:h-[110vh] min-[700px]:h-[140vh] bg-[url('https://images.unsplash.com/photo-1514108225820-2b602873ac36?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-no-repeat bg-cover 
-     flex max-[500px]:pb-[20px] items-end min-[500px]:items-center justify-center bg-center
+    <main id="main-container" class="mb-[20px] max-[250px]:h-[125vh] max-[350px]:h-[120vh] max-[600px]:h-[80vh]  h-[90vh] bg-[url('https://images.unsplash.com/photo-1550565118-3a14e8d0386f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-no-repeat bg-cover 
+     flex max-[400px]:pb-[20px] items-center justify-center bg-center
   ">
 
         <div id="main-div-cont"
-            class="border-2 border-white  w-[90%] min-[650px]:w-[80%] min-[900px]:w-[60%]    text-white  text-center">
+            class="border-2 border-white  w-[90%] min-[650px]:w-[80%] min-[900px]:w-[60%] text-black text-center">
 
             
             <div id="main-balance-heading-box">
-                <h2 class="border-2 border-yellow-800 text-[25px] min-[340px]:text-[35px] min-[650px]:text-[45px] font-bold text-start min-[300px]:p-[10px] min-[650px]:p-[20px]">Your Summary</h2>
+                <h2 class=" text-[25px] min-[400px]:text-[35px] min-[650px]:text-[45px] text-white bg-black opacity-75  font-bold text-center p-[10px] min-[650px]:p-[15px]">Your Summary</h2>
              </div>
-            <div id="bal-sav-container" class="border-2 border-white min-[350px]:flex justify-evenly py-[30px]">
+            <div id="bal-sav-container" class=" min-[350px]:flex justify-evenly py-[30px] ">
                 
-                <div id="main-bal-box" class=" border-2 border-red-800 bg-white max-[350px]:mb-[15px] max-[350px]:mx-auto max-[350px]:w-[60%] text-black rounded-[15px]  min-[300px]:p-[10px] min-[650px]:p-[25px]">
+                <div id="main-bal-box" class="summary-cards bg-white  max-[350px]:mb-[15px] max-[350px]:mx-auto max-[350px]:w-[60%] text-black rounded-[15px]  min-[300px]:p-[10px] min-[650px]:p-[25px]">
                     <p class="text-[20px] min-[600px]:text-[30px] font-semibold ">Your Balance</p>
                     <p id="main-bal" class="text-[25px] min-[600px]:text-[40px] font-bold text-sky-700">
                         0.00
                         
                     </p><span class="text-sky-700 text-[15px] min-[600px]:text-[20px] font-bold">RS</span>
                 </div>
-                <div id="main-sav-box " class="border-2 border-red-800 bg-white max-[350px]:mx-auto max-[350px]:w-[60%] text-black rounded-[15px] min-[300px]:p-[10px] min-[650px]:p-[25px] ">
+                <div id="main-sav-box " class=" summary-cards bg-white max-[350px]:mx-auto max-[350px]:w-[60%] text-black rounded-[15px] min-[300px]:p-[10px] min-[650px]:p-[25px] ">
                     <p class="text-[20px] min-[600px]:text-[30px] font-semibold "> Your Savings</p>
                     <p id="main-sav" class="text-[25px] min-[600px]:text-[40px] font-bold text-green-700">
                         0.00 
@@ -58,16 +107,16 @@
             </div>
 
 
-            <div id="exp-inc-container" class="border-2 border-white min-[350px]:flex  justify-evenly py-[30px]">
+            <div id="exp-inc-container" class=" min-[350px]:flex  justify-evenly py-[30px]">
 
-                <div id="main-inc-box" class=" border-2 border-red-800 bg-white max-[350px]:mb-[15px] max-[350px]:mx-auto max-[350px]:w-[60%] text-black rounded-[15px] min-[300px]:p-[10px] min-[650px]:p-[25px]">
+                <div id="main-inc-box" class=" summary-cards bg-white max-[350px]:mb-[15px] max-[350px]:mx-auto max-[350px]:w-[60%] text-black rounded-[15px] min-[300px]:p-[10px] min-[650px]:p-[25px]">
                     <p class="text-[20px] min-[600px]:text-[30px] font-semibold">Your Income</p>
                     <p id="main-inc" class="text-[25px] min-[600px]:text-[40px] font-bold text-black">
                         0.00
                         
                     </p><span class="text-black text-[15px] min-[600px]:text-[20px] font-bold">RS</span>
                 </div>
-                <div id="main-exp-box " class="border-2 border-red-800 bg-white max-[350px]:mx-auto max-[350px]:w-[60%] text-black rounded-[15px] min-[300px]:p-[10px] min-[650px]:p-[25px] ">
+                <div id="main-exp-box " class="summary-cards bg-white max-[350px]:mx-auto max-[350px]:w-[60%] text-black rounded-[15px] min-[300px]:p-[10px] min-[650px]:p-[25px] ">
                     <p class="text-[20px] min-[600px]:text-[30px] font-semibold "> Your Expense</p>
                     <p id="main-exp" class="text-[25px] min-[600px]:text-[40px] font-bold text-red-800">
                         0.00 
@@ -80,37 +129,43 @@
 
     </main>
 
-<!-- TRANSACTION ENTRY SECTION -->
-    <section id="your-tanscations-section-entry" class="h-[160vh] min-[750px]:h-[100vh] w-full border-2 border-black min-[750px]:flex items-center justify-evenly h-[100vh] bg-[url('https://images.unsplash.com/photo-1617203441790-5723a811b7fe?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-no-repeat bg-cover bg-center ">
 
 
+
+
+
+    <div id="transction-passage-head-box" class="text-[18px] min-[400px]:text-[23px] min-[600px]:text-[35px] font-bold text-center py-[10px]">
+        <h2 id="transction-passage-head">Add or Delete your Transaction:-</h2>
+    </div>
+<!-- TRANSACTION ENTRY SECTION and DISPALY SECTION -->
+    <section id="your-tanscations-section-entry" class="my-[20px] max-[1000px]:py-[45px] min-[1000px]:h-[100vh] w-full max-[800px]:flex-col flex items-center justify-evenly  bg-[url('https://images.unsplash.com/photo-1617203441790-5723a811b7fe?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-no-repeat bg-cover bg-center ">
 <!-- TRANSACTION ENTRY POINT -->
         <div id="your-transcation-box"
-            class="border-2 border-black mx-auto w-[90%] min-[550px]:w-[70%] min-[750px]:w-[50%] p-[7px] min-[300px]:p-[15px] min-[1150px]:p-[25px]   text-black min-[750px]:h-[80%] max-[750px]:my-[20px] text-white bg-black opacity-70 rounded">
-            <p class="text-[20px] min-[350px]:text-[25px] min-[1000px]:text-[35px] font-bold mb-[20px]">Please Add Your Transaction:-</p>
+            class="mx-auto w-[90%] min-[550px]:w-[70%] min-[800px]:w-[40%] p-[7px] min-[300px]:p-[15px] min-[1150px]:p-[25px]   text-black   max-[800px]:my-[20px] text-white bg-black opacity-75 rounded">
+            <p class=" text-center border-b-2  border-white px-[10px] text-[15px] min-[350px]:text-[20px] min-[1000px]:text-[35px] font-bold mb-[20px] text-[#f60000]">Please Add Your Transaction</p>
             <form action="" class="flex flex-col ">
                 <div class="border-black border-2 flex align-center mb-[20px]">
                     <label for="trans-description"
-                        class="border-2 border-black text-[15px] min-[350px]:text-[20px] min-[1000px]:text-[30px] font-bold ">Description:-</label>
+                        class="border-2 border-black text-[15px] min-[350px]:text-[18px] min-[1100px]:text-[25px] font-bold ">Description:-</label>
                     <input type="text" id="trans-description" placeholder="Description"
-                        class="border-2 border-black text-[20px] p-[5px] inline-block w-[100%] text-black">
+                        class="text-[13px] p-[5px] inline-block w-[100%] text-black">
                 </div>
 
                 <div class="border-black border-2 flex align-center mb-[20px]">
-                    <label for="trans-amount" class="border-2 border-black text-[15px] min-[350px]:text-[20px] min-[1000px]:text-[30px] font-bold">Amount:-</label>
+                    <label for="trans-amount" class="border-2 border-black text-[15px] min-[350px]:text-[18px] min-[1100px]:text-[25px] font-bold">Amount:-</label>
                     <input type="number" id="trans-amount" placeholder="Amount"
-                        class="border-2 border-black text-[20px] p-[5px] inline-block w-[100%] text-black">
+                        class="text-[13px] p-[5px] inline-block w-[100%] text-black">
                 </div>
 
                <!-- DATE -->
                 <div class="border-black border-2 flex align-center mb-[20px]">
-                    <label for="trans-date" class="border-2 border-black text-[15px] min-[350px]:text-[20px] min-[1000px]:text-[30px] font-bold">Date:-</label>
+                    <label for="trans-date" class="border-2 border-black text-[15px] min-[350px]:text-[18px] min-[1100px]:text-[25px] font-bold">Date:-</label>
                     <input type="date" id="trans-date" placeholder=""
-                        class="border-2 border-black text-[20px] p-[5px] inline-block w-[100%] text-black">
+                        class="text-[13px] p-[5px] inline-block w-[100%] text-black">
                 </div>
 
                 <div class="border-black border-2 flex align-center mb-[20px]">
-                    <label for="types-of-trans" class="border-2 border-black text-[15px] min-[350px]:text-[20px] min-[1000px]:text-[30px] font-bold">Type:-</label>
+                    <label for="types-of-trans" class="border-2 border-black text-[15px] min-[350px]:text-[18px] min-[1100px]:text-[22px] font-bold">Type:-</label>
                     <select name="types" id="trans-type"
                         class="border-2 border-black text-[20px] p-[5px] inline-block w-[100%] text-black">
                         <option value="#">Click Me</option>
@@ -123,20 +178,18 @@
                     Transaction</button>
             </form>
         </div>
-
-
 <!-- TRANSACTION HISTORY DISPALY -->
-        <div id="your-transaction-display-history" class="mx-auto w-[90%] min-[550px]:w-[70%] border-2 border-black h-[50%] min-[750px]:h-[80%] overflow-y-scroll min-[750px]:w-[40%] text-white bg-black opacity-70 rounded" >
-            <p class="border-2 border-black text-[25px] min-[1000px]:text-[35px] font-bold ">Transaction History</p>
-             <table id="transaction-table" class="w-[100%] text[15px] min-[1150px]:text-[25px] font-semibold border-2 border-black ">
-                    <tr>
-                        <td class="border-2 border-white text-center">Sr.No</td>
-                        <td class="border-2 border-white">Description</td>
-                        <td class="border-2 border-white">Amount</td>
-                        <td class="border-2 border-white">Type</td>
-                        <td class="border-2 border-white">Date</td>
-                        <td class="border-2 border-white"><button>X</button></td>
-                    </tr>
+        <div id="your-transaction-display-history" class=" mx-auto w-[95%] min-[800px]:w-[50%] h-[500px]   overflow-y-scroll   text-white bg-black opacity-75 rounded" >
+            <p class="border-b-2  border-white text-[18px] min-[400px]:text-[25px] min-[1000px]:text-[35px] font-bold py-[5px] text-center text-[#f60000]">Transaction History</p>
+             <table id="transaction-table" class="text-center w-[100%] text-[12px] min-[400px]:text-[15px] min-[1150px]:text-[20px] font-semibold  ">
+                    <!-- <tr>
+                        <td class="border-white border-b-2 p-[3px]">Sr.No</td>
+                        <td class="border-white border-2 p-[3px]">Description</td>
+                        <td class="border-white border-b-2 p-[3px]">Amount</td>
+                        <td class="border-white border-b-2 p-[3px]">Type</td>
+                        <td class="border-white border-b-2 p-[3px]">Date</td>
+                        <td class="border-white border-b-2 "><button>X</button></td>
+                    </tr> -->
              </table>
     
            
@@ -147,8 +200,13 @@
 
 
 
-    <section id="pie-chart-container" class="mt-[30px] min-[600px]:h-[90vh] flex items-center justify-center  border-2 border-black bg-[url('https://images.unsplash.com/photo-1494888427482-242d32babc0b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-no-repeat bg-cover bg-center">
-        <canvas id="myChart" class="border-2 border-red-500 w-[80%] bg-black opacity-70">
+
+    <div id="transction-piechart-head-box" class="text-[18px] min-[400px]:text-[23px] min-[600px]:text-[35px] font-bold text-center py-[10px]">
+        <h2 id="transction-piechart-head">Pie Chart:-</h2>
+    </div>
+<!-- PIE CHART SECTION -->
+    <section id="pie-chart-container" class="mt-[20px] min-[600px]:h-[90vh] flex items-center justify-center   bg-[url('https://images.unsplash.com/photo-1494888427482-242d32babc0b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-no-repeat bg-cover bg-center py-[30px]">
+        <canvas id="my-chart" class="w-[100%] bg-black opacity-80 p-[5px]">
             
         </canvas>
     </section>
